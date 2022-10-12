@@ -1,3 +1,5 @@
+# Para los tíos de Windows, **utilizar Docker con el WSL**, no utilicéís el CMD o el bash de git.
+
 # Instalación de Docker compose
 
 - **Windows Fanboys**: Se supone que los ya deberían tener el docker compose al
@@ -21,11 +23,11 @@ Para detener los contenedores y borrarlos con todo y sus volúmenes.
 
 Para instalar las dependencias del proyecto:
 
-> docker compose run backend php composer.phar install
+> docker compose run backend php vendor/composer.phar install
 
 Para correr vuestros tests:
 
-> docker compose run backend php composer.phar test
+> docker compose run backend php vendor/composer.phar test
 
 ### Probar la conexión con MySQL
 

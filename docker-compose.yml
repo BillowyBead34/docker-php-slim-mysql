@@ -18,11 +18,12 @@ services:
       MYSQL_DATABASE: slim_test
       MYSQL_ROOT_PASSWORD: password
   backend:
+    volumes:
+      - ./backend:/var/www/html/
+      - /var/www/html/vendor
     build: ./backend
     environment:
       docker: "true"
-    volumes:
-      - ./backend:/var/www/html/
     ports:
       - "8080:80"
   frontend:
