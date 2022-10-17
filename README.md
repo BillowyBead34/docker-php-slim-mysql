@@ -7,6 +7,12 @@
 
 - **Tuxers**: Ya saben como instalar esta clase de cosas.
 
+- Después que se levanten los contenedores es importante correr los siguientes
+  comandos:
+
+    - `docker compose run backend php composer.phar install`
+    - `docker compose run backend php composer.phar auto-dump`
+
 ### Comandos importantes
 
 Para levantar los contenedores:

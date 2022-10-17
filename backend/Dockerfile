@@ -14,17 +14,5 @@ RUN apt install git -y
 # Install zip / unzip
 RUN apt install zip unzip -y
 
-# Install composer
-COPY ./composer-installer.sh ./
-RUN chmod +x ./composer-installer.sh
-RUN ./composer-installer.sh
-
-# Install dependencies
-COPY ./composer.json ./
-COPY ./composer.lock ./
-RUN php composer.phar install
-RUN php composer.phar dump-autoload
-RUN mv composer.phar vendor/
-
 # Enable Apache rewrite module
 RUN a2enmod rewrite
